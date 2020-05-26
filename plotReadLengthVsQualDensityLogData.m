@@ -23,7 +23,7 @@ function plotReadLengthVsQualDensityLogData
 %%
 colours=zeros(6,2); %initialise variable.
 
-%Supblot 1.
+%Subplot 1.
 data1=readmatrix('NanoPlot-data_barcode07.txt'); %load data.
 fig=figure('Position', get(0, 'Screensize')); %make figure full-screen.
 ax(1)=subplot(2,3,1);
@@ -43,7 +43,7 @@ newPosition=[pos(1)+0.01 pos(2) pos(3) pos(4)]; %define new position of current 
 newUnits='normalized';
 set(gca,'Position',newPosition,'Units',newUnits);
 
-%Supblot 2.
+%Subplot 2.
 data2=readmatrix('NanoPlot-data_barcode08.txt'); %load data.
 ax(2)=subplot(2,3,2);
 h2=hexscatter(log(data2(:,2)),data2(:,1)); %log-transform the data.
@@ -59,7 +59,7 @@ pos=get(gca,'position'); %get position of current axes.
 newPosition=[pos(1)+0.01 pos(2) pos(3) pos(4)]; %define new position of current axes.
 set(gca,'Position',newPosition,'Units',newUnits);
 
-%Supblot 3.
+%Subplot 3.
 data3=readmatrix('NanoPlot-data_barcode09.txt'); %load data.
 ax(3)=subplot(2,3,3);
 h3=hexscatter(log(data3(:,2)),data3(:,1)); %log-transform the data.
@@ -82,7 +82,7 @@ caxis([bottom top]);
 c=colorbar('location','Manual','position',[barpos-0.05 .1 .01 .81],'Units',newUnits);
 set(c,'YTickLabel',cellstr(num2str(reshape(get(c,'YTick'),[],1),'%g'))); %change colorbar values from scientific notation to standard notation.
 
-%Supblot 4.
+%Subplot 4.
 data4=readmatrix('NanoPlot-data_barcode10.txt'); %load data.
 ax(4)=subplot(2,3,4);
 h4=hexscatter(log(data4(:,2)),data4(:,1)); %log-transform the data.
@@ -99,7 +99,7 @@ pos=get(gca,'position'); %get position of current axes.
 newPosition=[pos(1)+0.01 pos(2) pos(3) pos(4)]; %define new position of current axes.
 set(gca,'Position',newPosition,'Units',newUnits);
 
-%Supblot 5.
+%Subplot 5.
 data5=readmatrix('NanoPlot-data_barcode11.txt'); %load data.
 ax(5)=subplot(2,3,5);
 h5=hexscatter(log(data5(:,2)),data5(:,1)); %log-transform the data.
@@ -115,7 +115,7 @@ pos=get(gca,'position'); %get position of current axes.
 newPosition=[pos(1)+0.01 pos(2) pos(3) pos(4)]; %define new position of current axes.
 set(gca,'Position',newPosition,'Units',newUnits);
 
-%Supblot 6.
+%Subplot 6.
 data6=readmatrix('NanoPlot-data_barcode12.txt'); %load data.
 ax(6)=subplot(2,3,6);
 h6=hexscatter(log(data6(:,2)),data6(:,1)); %log-transform the data.
